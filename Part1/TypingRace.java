@@ -135,7 +135,7 @@ public class TypingRace
 
         // [FIX 2: Ty had accuracy * MISTYPE_CHANCE which meant better typists mistyped MORE
         // that's completely backwards, fixed it so lower accuracy means higher mistype chance]
-        if (Math.random() < (1.0 - t.getAccuracy()) * MISTYPE_CHANCE)
+        else if (Math.random() < (1.0 - t.getAccuracy()) * MISTYPE_CHANCE)
         {
             t.slideBack(SLIDE_BACK);
             if (seat == 1) seat1Mistyped = true;
